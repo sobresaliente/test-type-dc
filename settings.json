@@ -1,19 +1,30 @@
 {
     "WindowSize": {
+        // Width of the window if equals 0, the window will be fullscreen
         "Width": 0,
+        // Height of the window if equals 0, the window will be fullscreen
         "Hight": 0
     },
     "Bot": {
+        // If true, the white player is a bot
         "IsWhiteBot": false,
+        // If true, the black player is a bot
         "IsBlackBot": true,
+        // Level of the white. Max depth of the algo equals to white level + 1
         "WhiteBotLevel": 0,
+        // Level of the black. Max depth of the algo equals to black level + 1
         "BlackBotLevel": 5,
+        // Type of the scoring function, if equals to "NumberAndPotential", the bot will take the position of the pieces into account
         "BotScoringType": "NumberAndPotential",
+        // Delay between moves in milliseconds
         "BotDelayMS": 0,
+        // If set to false, the bot will use random moves engine instead of deterministic moves
         "NoRandom": false,
+        // Optimization level of the bot, if equals to "O0", the algo will disable alpha-beta pruning(set to "01" for better performance)
         "Optimization": "O1"
     },
     "Game": {
+        // Max number of turns allowed before the game is over
         "MaxNumTurns": 120
     }
 }
