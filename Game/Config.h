@@ -13,6 +13,7 @@ class Config
         reload();
     }
 
+    // Load the config from settings.json in the project root
     void reload()
     {
         std::ifstream fin(project_path + "settings.json");
@@ -20,6 +21,7 @@ class Config
         fin.close();
     }
 
+    // Get the value of a setting from settings.json file. Ex: const int Max_turns = config("Game", "MaxNumTurns");
     auto operator()(const string &setting_dir, const string &setting_name) const
     {
         return config[setting_dir][setting_name];
